@@ -1,0 +1,936 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Paula Batista | Método Vida Abundante</title>
+<meta name="description" content="Paula Batista, empresária e mentora, conduz dez empresas em três estados e ensina o Método Vida Abundante. Conheça a história, a mentoria, as palestras e o livro dela.">
+<meta property="og:title" content="Paula Batista | Método Vida Abundante">
+<meta property="og:description" content="Empresária, mentora e palestrante. Dez empresas em três estados e o Método Vida Abundante.">
+<meta property="og:image" content="img/paula-083-2000.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="logo/pb-monograma.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="image" href="img/paula-083-2000.jpg">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..600;1,6..96,400..500&display=swap" rel="stylesheet">
+
+<style>
+/* ============================================================
+   TOKENS
+   ============================================================ */
+:root{
+  --marfim:#F7F1E8;
+  --linho:#EFE5D8;
+  --areia:#E1D2BE;
+  --cafe:#32241B;
+  --cafe-md:#5B4736;
+  --tabaco:#3B2920;
+  --blazer:#6E4E38;
+  --oliva:#4A4B37;
+  --ouro:#B8873F;
+  --ouro-claro:#E4C68E;
+  --ouro-texto:#8A6227;
+
+  --display:"Bodoni Moda","Bodoni 72",Didot,"Times New Roman",serif;
+  --texto:"Archivo","Helvetica Neue",Arial,sans-serif;
+
+  --gut:clamp(1rem,4vw,5rem);
+  --max:1280px;
+  --resp:clamp(4.5rem,10vw,10.5rem);
+  --curva:cubic-bezier(.16,1,.3,1);
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;overflow-x:clip}
+body{
+  margin:0;background:var(--marfim);color:var(--cafe);
+  font-family:var(--texto);font-size:1.125rem;line-height:1.62;font-weight:400;
+  -webkit-font-smoothing:antialiased;overflow-x:clip;
+}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3,p,ul,ol,figure,blockquote{margin:0}
+ul,ol{padding:0;list-style:none}
+::selection{background:var(--areia);color:var(--cafe)}
+:focus-visible{outline:2px solid var(--ouro-texto);outline-offset:3px}
+
+.env{width:100%;max-width:var(--max);margin-inline:auto;padding-inline:var(--gut)}
+.oculto{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* ============================================================
+   TIPOGRAFIA
+   ============================================================ */
+.tit{
+  font-family:var(--display);font-weight:400;
+  font-size:clamp(2rem,4.6vw,4.2rem);line-height:1.04;letter-spacing:-.015em;
+  text-wrap:balance;
+}
+.tit em{font-style:italic;font-weight:400}
+.corpo p+p{margin-top:1.15em}
+.corpo{max-width:34rem;font-size:1.125rem;line-height:1.66;color:#3F2F23}
+
+/* ============================================================
+   BOTOES
+   ============================================================ */
+.bt{
+  position:relative;display:inline-flex;align-items:center;justify-content:center;
+  min-height:48px;padding:.85rem 1.6rem;
+  font-family:var(--texto);font-size:.875rem;font-weight:500;letter-spacing:.01em;
+  text-decoration:none;border:1px solid var(--cafe);border-radius:1px;
+  overflow:hidden;isolation:isolate;transition:color .35s var(--curva),border-color .35s var(--curva);
+}
+.bt span{position:relative;z-index:2}
+.bt::before{
+  content:"";position:absolute;inset:0;z-index:1;
+  transform:scaleY(1);transform-origin:bottom;transition:transform .45s var(--curva);
+}
+.bt--cheio{color:var(--marfim);background:var(--cafe)}
+.bt--cheio::before{background:var(--blazer);transform:scaleY(0)}
+.bt--cheio:hover::before,.bt--cheio:focus-visible::before{transform:scaleY(1)}
+.bt--fio{color:var(--cafe);background:transparent}
+.bt--fio::before{background:var(--cafe);transform:scaleY(0)}
+.bt--fio:hover,.bt--fio:focus-visible{color:var(--marfim)}
+.bt--fio:hover::before,.bt--fio:focus-visible::before{transform:scaleY(1)}
+.bt--claro{color:var(--tabaco);background:var(--marfim);border-color:var(--marfim)}
+
+/* link com sublinhado de ouro que cresce da esquerda */
+.lnk{
+  position:relative;text-decoration:none;padding-bottom:2px;
+}
+.lnk::after{
+  content:"";position:absolute;left:0;bottom:0;height:1px;width:100%;
+  background:var(--ouro);transform:scaleX(0);transform-origin:left;
+  transition:transform .45s var(--curva);
+}
+.lnk:hover::after,.lnk:focus-visible::after{transform:scaleX(1)}
+
+/* ============================================================
+   NAVEGACAO
+   ============================================================ */
+.topo{
+  position:fixed;inset:0 0 auto 0;z-index:50;
+  transition:background .5s var(--curva),box-shadow .5s var(--curva);
+}
+/* veu de luz: garante que a navegacao se leia sobre qualquer foto */
+.topo::before{
+  content:"";position:absolute;inset:0 0 -60px 0;pointer-events:none;
+  background:linear-gradient(to bottom,rgba(247,241,232,.96) 0%,rgba(247,241,232,.82) 46%,rgba(247,241,232,0) 100%);
+  transition:opacity .5s var(--curva);
+}
+.topo--pousado{background:rgba(247,241,232,.95);backdrop-filter:blur(9px);box-shadow:0 1px 0 rgba(160,140,115,.3)}
+.topo--pousado::before{opacity:0}
+.topo__linha{
+  position:relative;display:flex;align-items:center;gap:1.5rem;
+  min-height:76px;flex-wrap:nowrap;
+}
+.marca{display:inline-flex;align-items:center;margin-right:auto;flex:0 0 auto}
+.marca img{height:46px;width:auto}
+.marca__mini{display:none}
+.marca__cheio{display:inline-flex;align-items:center;gap:.7rem}
+.marca__nome{font-family:var(--display);font-weight:600;font-size:1.2rem;letter-spacing:.035em;color:var(--cafe);line-height:1;white-space:nowrap}
+.menu{display:flex;gap:1.6rem;align-items:center;flex:0 1 auto}
+.menu a{
+  font-size:.8125rem;font-weight:500;letter-spacing:.055em;text-transform:uppercase;
+  text-decoration:none;color:var(--cafe-md);white-space:nowrap;
+}
+.topo .bt{min-height:44px;padding:.6rem 1.15rem;font-size:.8125rem;flex:0 0 auto}
+.so-estreita{display:none}
+.abre{display:none}
+
+@media (max-width:900px){
+  .marca img{height:34px}
+  .marca__cheio{display:none}
+  .marca__mini{display:block}
+  .so-larga{display:none}
+  .so-estreita{display:inline}
+  .menu{
+    position:fixed;top:0;left:0;right:0;bottom:0;z-index:55;
+    flex-direction:column;justify-content:center;gap:1.25rem;
+    background:var(--marfim);padding:var(--gut);
+    transform:translateY(-100%);opacity:0;visibility:hidden;pointer-events:none;
+    transition:transform .55s var(--curva),opacity .35s var(--curva),visibility 0s linear .55s;
+  }
+  .menu[data-aberto="1"]{
+    transform:translateY(0);opacity:1;visibility:visible;pointer-events:auto;
+    transition:transform .55s var(--curva),opacity .35s var(--curva),visibility 0s;
+  }
+  .menu a{font-size:1.25rem;letter-spacing:.02em;text-transform:none;font-family:var(--display);font-weight:400}
+  .abre{
+    display:inline-flex;align-items:center;justify-content:center;min-height:44px;min-width:44px;
+    background:none;border:0;font:500 .8125rem/1 var(--texto);letter-spacing:.06em;
+    text-transform:uppercase;color:var(--cafe);cursor:pointer;z-index:60;position:relative;
+  }
+  .topo__linha{min-height:66px}
+}
+
+/* ============================================================
+   ATMOSFERA: sombra de folhagem e luz
+   ============================================================ */
+.folha{
+  position:absolute;pointer-events:none;z-index:1;
+  width:min(62vw,720px);aspect-ratio:1/1;
+  opacity:.15;filter:blur(7px);mix-blend-mode:multiply;
+  transform-origin:top left;
+}
+.folha--topo{top:-28%;left:-16%;width:min(50vw,600px);-webkit-mask-image:linear-gradient(to bottom,#000 45%,transparent 88%);mask-image:linear-gradient(to bottom,#000 45%,transparent 88%)}
+@media (prefers-reduced-motion:no-preference){
+  .folha{animation:folhagem 11s ease-in-out infinite alternate}
+}
+@keyframes folhagem{
+  from{transform:translate3d(0,0,0) rotate(0deg)}
+  to{transform:translate3d(14px,10px,0) rotate(1.6deg)}
+}
+
+.arco{position:absolute;pointer-events:none;z-index:2}
+.arco path{fill:none;stroke-width:2.2;stroke-linecap:round;vector-effect:non-scaling-stroke}
+
+/* ============================================================
+   ABERTURA
+   ============================================================ */
+.abertura{
+  position:relative;min-height:100svh;min-height:100vh;
+  display:grid;grid-template-rows:76px 1fr auto;
+  padding-bottom:clamp(2rem,5vh,4rem);
+  isolation:isolate;overflow:clip;
+}
+.abertura__foto{
+  position:absolute;z-index:1;
+  top:0;right:0;left:40%;bottom:0;
+  overflow:hidden;
+  -webkit-mask-image:linear-gradient(97deg,transparent 1%,rgba(0,0,0,.45) 15%,#000 42%);
+  mask-image:linear-gradient(97deg,transparent 1%,rgba(0,0,0,.45) 15%,#000 42%);
+}
+.abertura__foto img{width:100%;height:100%;object-fit:cover;object-position:54% 0%;will-change:transform}
+/* o degrade que funde a foto no fundo */
+.abertura__fusao{
+  position:absolute;inset:0;z-index:2;pointer-events:none;
+  background:
+    linear-gradient(to top,var(--marfim) 0%,rgba(247,241,232,.92) 9%,rgba(247,241,232,.55) 22%,rgba(247,241,232,0) 44%),
+    linear-gradient(to right,var(--marfim) 20%,rgba(247,241,232,.6) 34%,rgba(247,241,232,0) 56%),
+    linear-gradient(to bottom,rgba(247,241,232,.5) 0%,rgba(247,241,232,0) 14%),
+    radial-gradient(58% 46% at 82% 6%,rgba(228,198,142,.34),rgba(228,198,142,0) 68%);
+}
+.abertura__texto{position:relative;z-index:4;grid-row:2;align-self:center;padding-top:clamp(1rem,4vh,3rem)}
+.abertura__prazer{
+  font-size:clamp(1rem,1.5vw,1.25rem);font-weight:300;color:var(--cafe-md);
+  margin-bottom:.65rem;
+}
+.tese{
+  font-size:clamp(1.0625rem,1.55vw,1.3125rem);line-height:1.55;font-weight:300;
+  max-width:26rem;color:#3F2F23;
+}
+.tese b{font-weight:400;display:inline}
+.tese em{
+  display:block;margin-top:.55rem;
+  font-family:var(--display);font-style:italic;font-weight:400;
+  font-size:clamp(1.35rem,2.4vw,2rem);line-height:1.2;color:var(--cafe);
+}
+.abertura__acao{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:clamp(1.5rem,3.5vh,2.5rem)}
+
+.abertura__pe{position:relative;z-index:4;grid-row:3}
+.nome{
+  font-family:var(--display);font-weight:500;
+  font-size:clamp(3.4rem,12.4vw,11.5rem);line-height:.82;letter-spacing:-.025em;
+  color:var(--cafe);
+}
+.nome .lin{display:block;overflow:hidden;padding-bottom:.02em}
+.nome .lin i{display:block;font-style:normal}
+.nome .lin:last-child{margin-left:.36em}
+.credito{
+  display:flex;align-items:center;gap:1.25rem;margin-top:clamp(1rem,2.6vh,1.75rem);
+}
+.credito::before{content:"";flex:1 1 auto;height:1px;background:var(--areia)}
+.credito span{
+  flex:0 0 auto;font-size:.8125rem;font-weight:500;letter-spacing:.055em;
+  text-transform:uppercase;color:var(--ouro-texto);
+}
+.abertura .arco{
+  left:0;right:0;bottom:12%;height:34%;z-index:2;
+}
+.abertura .arco path{stroke:var(--ouro);opacity:.85}
+
+@media (max-width:900px){
+  .abertura{grid-template-rows:66px auto auto auto;min-height:auto;padding-bottom:clamp(2rem,6vh,3rem)}
+  .abertura__foto{
+    position:relative;grid-row:2;left:auto;right:auto;top:auto;bottom:auto;margin:0;
+    height:58svh;min-height:330px;
+    -webkit-mask-image:none;mask-image:none;
+  }
+  .abertura__foto img{object-position:56% 3%}
+  .abertura__fusao{
+    background:
+      linear-gradient(to top,var(--marfim) 0%,rgba(247,241,232,.9) 11%,rgba(247,241,232,0) 38%),
+      radial-gradient(70% 40% at 78% 6%,rgba(228,198,142,.3),rgba(228,198,142,0) 70%);
+  }
+  .abertura__pe{grid-row:3;margin-top:-3.4rem}
+  .abertura__texto{grid-row:4;align-self:start;padding-top:1.75rem}
+  .abertura__acao .bt{flex:1 1 13rem}
+  .nome{font-size:clamp(3.9rem,15.5vw,6.5rem)}
+  .nome .lin:last-child{margin-left:.18em}
+  .tese{max-width:none}
+  .abertura .arco{bottom:auto;top:52svh;height:18%}
+  .folha--topo{width:80vw;top:2%;left:-16%}
+}
+
+/* ============================================================
+   CENA 2 · A PROVA
+   ============================================================ */
+.prova{
+  position:relative;z-index:3;background:var(--tabaco);color:var(--marfim);
+}
+.prova::before{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(70% 55% at 16% 0%,rgba(228,198,142,.13),rgba(228,198,142,0) 62%);
+}
+.prova__cena{
+  position:relative;min-height:100svh;display:grid;align-content:center;
+  padding-block:var(--resp);overflow:clip;
+}
+.prova__foto{
+  position:absolute;z-index:1;top:0;bottom:0;right:0;width:46%;
+  overflow:hidden;
+  -webkit-mask-image:linear-gradient(95deg,transparent 0%,rgba(0,0,0,.4) 18%,#000 52%);
+  mask-image:linear-gradient(95deg,transparent 0%,rgba(0,0,0,.4) 18%,#000 52%);
+}
+.prova__foto img{width:100%;height:100%;object-fit:cover;object-position:52% 18%;will-change:transform}
+.prova__foto::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(to top,var(--tabaco) 0%,rgba(59,41,32,.55) 18%,rgba(59,41,32,0) 46%),
+             linear-gradient(to right,rgba(59,41,32,.75) 0%,rgba(59,41,32,0) 42%);
+}
+.prova__dentro{position:relative;z-index:3;width:100%}
+.prova__abre{
+  font-family:var(--display);font-size:clamp(1.25rem,2.1vw,1.75rem);line-height:1.3;
+  max-width:22rem;color:#E9DCCB;margin-bottom:clamp(2rem,5vh,3.5rem);
+}
+.prova__lista{display:grid;gap:clamp(2.5rem,6vh,4rem);max-width:30rem}
+.prova__item{display:block}
+.prova__cerca{
+  display:block;font-size:.875rem;font-weight:400;letter-spacing:.02em;
+  color:#C6B199;margin-bottom:.15rem;
+}
+.prova__num{
+  display:block;font-family:var(--display);font-weight:400;
+  font-size:clamp(4.2rem,12.5vw,12rem);line-height:.92;letter-spacing:-.02em;color:var(--marfim);
+  white-space:nowrap;
+}
+.prova__num u{
+  text-decoration:none;font-size:.4em;letter-spacing:.07em;
+  vertical-align:.34em;margin-right:.2em;color:#E9DCCB;
+}
+.prova__leg{
+  display:block;max-width:28rem;margin-top:.9rem;
+  font-size:1.2rem;line-height:1.5;font-weight:300;color:#D8C8B4;
+}
+.prova .arco{left:var(--gut);right:var(--gut);bottom:clamp(2.5rem,8vh,6rem);height:12%;z-index:4}
+.prova .arco path{stroke:var(--ouro-claro);opacity:.9}
+.prova__trilho{height:0}
+
+@media (max-width:900px){
+  .prova__cena{padding-block:clamp(4rem,12vh,6rem)}
+  .prova__foto{
+    position:relative;width:auto;height:44svh;min-height:280px;
+    margin:0 calc(var(--gut)*-1) clamp(2rem,5vh,3rem);
+    -webkit-mask-image:none;mask-image:none;
+  }
+  .prova__foto::after{
+    background:linear-gradient(to top,var(--tabaco) 0%,rgba(59,41,32,.5) 22%,rgba(59,41,32,0) 55%);
+  }
+  .prova__lista{max-width:none}
+  .anim .prova__lista{max-width:none}
+  .prova .arco{bottom:5%;top:auto;height:9%}
+}
+
+/* ============================================================
+   CENA 3 · O COMECO DA HISTORIA
+   ============================================================ */
+.historia{
+  position:relative;z-index:3;
+  background:linear-gradient(to bottom,var(--marfim) 0%,var(--linho) 62%,var(--marfim) 100%);
+  padding-block:var(--resp);overflow:clip;
+}
+.historia__grade{
+  display:grid;grid-template-columns:minmax(0,.86fr) minmax(0,1fr);
+  gap:clamp(2.5rem,6vw,6rem);align-items:start;
+}
+.arcofoto{
+  position:relative;overflow:hidden;
+  border-radius:50% 50% 2px 2px / 26% 26% 0 0;
+  background:var(--areia);
+}
+.arcofoto img{width:100%;height:100%;object-fit:cover;will-change:transform}
+.arcofoto::after{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  box-shadow:inset 0 0 0 1px rgba(184,135,63,.35);
+  border-radius:inherit;
+}
+.historia__alta{aspect-ratio:2/3;position:sticky;top:clamp(84px,12vh,132px)}
+.historia__texto{padding-top:clamp(0rem,3vw,2.5rem)}
+.historia .tit{margin-bottom:clamp(1.5rem,3.5vh,2.25rem)}
+.historia__salto{
+  margin:clamp(2.25rem,5vh,3.25rem) 0;
+  font-family:var(--display);font-weight:400;font-style:italic;
+  font-size:clamp(1.8rem,3.5vw,3rem);line-height:1.12;letter-spacing:-.015em;
+  color:var(--blazer);max-width:18ch;
+}
+.historia__par{
+  display:grid;grid-template-columns:1fr 1fr;gap:clamp(1rem,2.5vw,2rem);
+  margin-top:clamp(2.5rem,6vh,4rem);align-items:end;
+}
+.historia__par .arcofoto{aspect-ratio:2/3}
+.historia__par .arcofoto:last-child{margin-bottom:clamp(2rem,6vh,4.5rem)}
+.legenda{
+  margin-top:.75rem;font-size:.8125rem;letter-spacing:.02em;color:var(--cafe-md);
+}
+.ln{display:block;overflow:hidden;padding-bottom:.16em;margin-bottom:-.16em}
+.ln i{display:block;font-style:inherit}
+
+@media (max-width:900px){
+  .historia__grade{grid-template-columns:1fr;gap:clamp(2rem,6vh,3rem)}
+  .historia__alta{position:relative;top:auto;max-width:78%}
+  .historia__par{margin-top:clamp(2rem,5vh,3rem)}
+}
+
+/* ============================================================
+   ESTADOS DE ANIMACAO
+   So existem quando a classe .anim esta no <html>, e ela so
+   entra quando GSAP carregou de verdade.
+   ============================================================ */
+.anim .abertura{position:sticky;top:0;z-index:1}
+.anim .abertura__foto{clip-path:inset(100% 0 0 0)}
+.anim .nome .lin i{transform:translateY(106%)}
+.anim .tese b,.anim .tese em{opacity:0;transform:translateY(14px)}
+.anim .abertura__prazer,.anim .abertura__acao,.anim .credito{opacity:0;transform:translateY(16px)}
+.anim .prova__trilho{height:300svh}
+.anim .prova__cena{position:sticky;top:0}
+.anim .prova__lista{position:relative;display:block;max-width:44rem;min-height:clamp(14rem,34vh,22rem)}
+.anim .prova__item{position:absolute;inset:0 auto auto 0;width:100%;opacity:0}
+.anim .prova__item:first-child{opacity:1}
+.anim .ln i{transform:translateY(106%)}
+.anim .historia .tit,.anim .historia__salto{opacity:1}
+.anim .arcofoto{clip-path:inset(0 0 100% 0)}
+
+/* modo de captura: mostra um quadro isolado da coreografia, sem depender de rolagem */
+[data-quadro] .prova__trilho{height:0}
+[data-quadro] .prova__cena{position:relative}
+[data-quadro^="prova"] .abertura{display:none}
+[data-quadro="historia"] .abertura,[data-quadro="historia"] .prova{display:none}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;transition-duration:.001ms!important}
+}
+
+/* ---------- mentorias e palestras ---------- */
+.caminhos{position:relative;z-index:3;background:var(--linho);padding:var(--resp) 0;overflow:clip}
+.caminhos__rotulo{font-family:var(--texto);font-size:.9375rem;font-weight:500;color:var(--ouro-texto);margin:0 0 .6rem}
+.caminhos .tit{margin:0 0 clamp(2.5rem,6vw,4.5rem);max-width:14ch}
+.caminhos__grade{display:grid;gap:clamp(2.5rem,6vw,5rem)}
+.caminho{display:grid;gap:1.1rem;align-content:start}
+.caminho__foto{aspect-ratio:4/5;max-width:520px}
+.caminho__tit{font-family:var(--display);font-weight:400;font-size:clamp(1.75rem,3vw,2.5rem);line-height:1.05;margin:.6rem 0 0;letter-spacing:-.01em}
+.caminho__texto{font-family:var(--texto);font-size:1.0625rem;line-height:1.65;color:#3F2F23;max-width:34rem;margin:0}
+.caminho__temas{font-family:var(--display);font-style:italic;font-size:1.05rem;line-height:1.5;color:var(--cafe-md);max-width:34rem;margin:0}
+.caminho .bt{justify-self:start;margin-top:.4rem}
+@media (min-width:900px){.caminhos__grade{grid-template-columns:1fr 1fr}.caminho:nth-child(2){margin-top:clamp(3rem,8vw,7rem)}}
+
+/* ---------- fecho curto (versão de apresentação, 19/09) ---------- */
+.fecho{position:relative;z-index:3;background:var(--tabaco);color:var(--marfim);padding:var(--resp) 0 calc(var(--resp) * .7);overflow:hidden}
+.fecho__grade{display:grid;gap:clamp(2rem,5vw,5rem);align-items:center}
+.fecho__foto{position:relative;aspect-ratio:4/5;max-width:440px;overflow:hidden;
+  -webkit-mask-image:linear-gradient(180deg,#000 62%,transparent 100%);mask-image:linear-gradient(180deg,#000 62%,transparent 100%)}
+.fecho__foto img{width:100%;height:100%;object-fit:cover;object-position:50% 22%;display:block}
+.fecho__frase{font-family:var(--display);font-weight:400;font-size:clamp(2.1rem,5.2vw,4.6rem);line-height:1.06;letter-spacing:-.01em;margin:0 0 1.2em;max-width:16ch}
+.fecho__frase em{font-style:italic;color:var(--ouro-claro)}
+.fecho__apoio{font-family:var(--texto);font-size:1.0625rem;line-height:1.65;max-width:46ch;margin:0 0 2.2rem;color:#E9DDCB}
+.fecho__acoes{display:flex;flex-wrap:wrap;gap:.75rem}
+.fecho .bt--cheio{background:var(--marfim);color:var(--cafe)}
+.fecho .bt--cheio::before{background:var(--ouro-claro)}
+.fecho .bt--fio{color:var(--marfim);box-shadow:inset 0 0 0 1px rgba(247,241,232,.55)}
+.fecho .bt--fio::before{background:var(--marfim)}
+.fecho .bt--fio:hover,.fecho .bt--fio:focus-visible{color:var(--cafe)}
+.rodape{position:relative;z-index:3;background:var(--tabaco);color:#D9CBB6;border-top:1px solid rgba(228,198,142,.25);padding:2.2rem 0 2.6rem;font-family:var(--texto);font-size:.9rem}
+.rodape__linha{display:flex;flex-wrap:wrap;gap:1rem 2rem;align-items:center;justify-content:space-between}
+.rodape img{height:44px;width:auto;display:block}
+.rodape a{color:var(--ouro-claro);text-underline-offset:.25em}
+.rodape__nota{margin:1.4rem 0 0;opacity:.75;font-size:.8125rem}
+@media (min-width:900px){.fecho__grade{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr)}}
+</style>
+</head>
+
+<body>
+<!--
+THESIS: o site e o comodo onde ela foi fotografada, nao uma pagina com fotos dentro; recusa o creme chapado com serifada italica e rotulo espacado que qualquer gerador entrega para este briefing.
+OWN-WORLD: parede de cal marfim com luz de tarde e sombra de folhagem, campo inteiro de tabaco na prova, foto sempre dissolvida em degrade da cor do fundo, moldura em arco vinda da janela do palacete, e um unico traco dourado em curva, que e o traco do monograma PB dela ampliado ate o tamanho da pagina. Didone Bodoni Moda com grotesca Archivo.
+STORY: quem chega ve a mulher antes de ler qualquer coisa, entende em quatro numeros o tamanho do que ela conduz, e entra na historia da loja vazia; a acao visivel do primeiro quadro e entrar na lista de espera.
+FIRST VIEWPORT: foto 083 ocupando dois tercos a direita, sangrando no topo e na direita e se dissolvendo no marfim a esquerda e embaixo; o nome em didone gigante no pe, invadindo a foto; a frase dela e os dois botoes a esquerda, no meio da altura; o arco de ouro atravessando por tras.
+FORM: cena fixa com coreografia de rolagem, primeira da lista ordenada de estruturas; sem seed key, o concept-seed.mjs desta instalacao nao imprime saida, e o BRIEF-V2 fixa a direcao.
+FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md
+-->
+
+<a class="oculto" href="#historia">Pular para a história</a>
+
+<header class="topo" id="topo">
+  <div class="env topo__linha">
+    <a class="marca" href="#" aria-label="Paula Batista, início">
+      <span class="marca__cheio"><img src="logo/pb-monograma.svg" alt="" width="46" height="34"><span class="marca__nome">Paula Batista</span></span>
+      <img class="marca__mini" src="logo/pb-monograma.svg" alt="Paula Batista" width="46" height="34">
+    </a>
+    <button class="abre" id="abre" aria-expanded="false" aria-controls="menu">Menu</button>
+    <nav class="menu" id="menu" aria-label="Principal">
+      <a class="lnk" href="#historia">História</a>
+      <a class="lnk" href="#mentorias">Mentorias e palestras</a>
+      <a class="lnk" href="#fecho">Propósito</a>
+    </nav>
+    <a class="bt bt--cheio" href="https://movimentovidaabundante.com.br/lista-de-espera" target="_blank" rel="noopener"><span><span class="so-larga">Entrar na lista de espera</span><span class="so-estreita">Lista de espera</span></span></a>
+  </div>
+</header>
+
+<main>
+
+<!-- ABERTURA ------------------------------------------------ -->
+<section class="abertura" aria-labelledby="nome">
+  <svg class="folha folha--topo" viewBox="0 0 600 600" aria-hidden="true" focusable="false">
+    <g fill="#6E4E38" stroke="none">
+      <path d="M-60 -40 C 90 50, 230 150, 340 300 C 380 355, 400 400, 412 448"
+            stroke="#6E4E38" stroke-width="5" fill="none"/>
+      <g id="fl">
+        <path d="M0 0 C 26 -22, 74 -26, 108 -6 C 74 20, 26 22, 0 0 Z"/>
+      </g>
+      <use href="#fl" transform="translate(28,8) rotate(-34)"/>
+      <use href="#fl" transform="translate(52,44) rotate(22)"/>
+      <use href="#fl" transform="translate(104,80) rotate(-28)"/>
+      <use href="#fl" transform="translate(128,132) rotate(30)"/>
+      <use href="#fl" transform="translate(190,170) rotate(-24)"/>
+      <use href="#fl" transform="translate(214,224) rotate(34)"/>
+      <use href="#fl" transform="translate(272,262) rotate(-20)"/>
+      <use href="#fl" transform="translate(296,318) rotate(38)"/>
+      <use href="#fl" transform="translate(344,366) rotate(-16)"/>
+      <use href="#fl" transform="translate(360,420) rotate(42)"/>
+      <use href="#fl" transform="translate(66,124) rotate(78)"/>
+      <use href="#fl" transform="translate(158,266) rotate(84)"/>
+    </g>
+  </svg>
+
+  <div class="abertura__foto" id="aberturaFoto">
+    <img src="img/paula-083-1000.jpg"
+         srcset="img/paula-083-1000.jpg 666w, img/paula-083-2000.jpg 1333w"
+         sizes="(max-width:900px) 100vw, 66vw"
+         width="1333" height="2000" fetchpriority="high" decoding="async"
+         alt="Paula Batista de branco, olhando de lado, num salão claro com lustre de cristal ao fundo">
+    <div class="abertura__fusao"></div>
+  </div>
+
+  <svg class="arco" viewBox="0 0 2019 900" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+    <defs><linearGradient id="gradArco" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#B8873F"/><stop offset=".5" stop-color="#E4C68E"/><stop offset="1" stop-color="#B8873F"/>
+    </linearGradient></defs>
+    <path d="M60 880 C 210 470, 900 210, 1990 168" stroke="url(#gradArco)"/>
+  </svg>
+
+  <div class="env abertura__texto">
+    <p class="abertura__prazer">Muito prazer, sou eu</p>
+    <p class="tese">
+      <b>A versão que você vê hoje.</b> <b>Forte.</b> <b>Serena.</b> <b>Presente.</b>
+      <em>Mas nem sempre fui assim.</em>
+    </p>
+    <div class="abertura__acao">
+      <a class="bt bt--cheio" href="#historia"><span>Conhecer minha história</span></a>
+      <a class="bt bt--fio" href="#mentorias"><span>Mentorias e palestras</span></a>
+    </div>
+  </div>
+
+  <div class="env abertura__pe">
+    <h1 class="nome" id="nome">
+      <span class="lin"><i>Paula</i></span>
+      <span class="lin"><i>Batista</i></span>
+    </h1>
+    <p class="credito"><span>Empresária, mentora e palestrante</span></p>
+  </div>
+</section>
+
+<!-- CENA 2 · A PROVA ---------------------------------------- -->
+<section class="prova" aria-labelledby="provaTit">
+  <div class="prova__cena">
+    <div class="prova__foto">
+      <img src="img/paula-063-1000.jpg"
+           srcset="img/paula-063-1000.jpg 666w, img/paula-063-2000.jpg 1333w"
+           sizes="(max-width:900px) 100vw, 48vw"
+           width="1333" height="2000" loading="lazy" decoding="async"
+           alt="Paula Batista de blazer marrom, expressão séria e serena, a mão perto do colar">
+    </div>
+
+    <div class="env prova__dentro">
+      <h2 class="prova__abre" id="provaTit">O que eu construí enquanto aprendia a acreditar.</h2>
+
+      <ol class="prova__lista">
+        <li class="prova__item">
+          <span class="prova__num">10</span>
+          <span class="prova__leg">empresas em três estados, no Paraná, em São Paulo e em Minas Gerais</span>
+        </li>
+        <li class="prova__item">
+          <span class="prova__cerca">cerca de</span>
+          <span class="prova__num">320</span>
+          <span class="prova__leg">profissionais de vendas no time</span>
+        </li>
+        <li class="prova__item">
+          <span class="prova__num"><u>R$</u> 1,2 bi</span>
+          <span class="prova__leg">em vendas no acumulado de 2024 e 2025</span>
+        </li>
+        <li class="prova__item">
+          <span class="prova__num"><u>R$</u> 90 mi</span>
+          <span class="prova__leg">em vendas em um único mês, março de 2026</span>
+        </li>
+      </ol>
+    </div>
+
+    <svg class="arco" viewBox="0 0 2019 400" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+      <path d="M20 372 C 240 210, 900 96, 2000 74" stroke="#E4C68E"/>
+    </svg>
+  </div>
+  <div class="prova__trilho" aria-hidden="true"></div>
+</section>
+
+<!-- CENA 3 · O COMECO DA HISTORIA --------------------------- -->
+<section class="historia" id="historia" aria-labelledby="historiaTit">
+  <div class="env historia__grade">
+
+    <figure class="arcofoto historia__alta">
+      <img src="img/paula-010-1000.jpg"
+           srcset="img/paula-010-1000.jpg 666w, img/paula-010-2000.jpg 1333w"
+           sizes="(max-width:900px) 78vw, 40vw"
+           width="1333" height="2000" loading="lazy" decoding="async"
+           alt="Paula Batista subindo uma escada, movimento suave">
+    </figure>
+
+    <div class="historia__texto">
+      <h2 class="tit" id="historiaTit">Nem sempre fui <em>assim</em>.</h2>
+
+      <div class="corpo">
+        <p data-linhas>Sou Paula Batista. Por sete anos fui consultora. Entregava resultado e mesmo assim ia dormir com medo do fim do mês. Até o dia em que tive a ousadia de abrir a minha própria loja. Ali eu deixava de ser empregada. Virava dona de um risco.</p>
+      </div>
+
+      <p class="historia__salto">A loja ficou seis meses vazia.</p>
+
+      <div class="corpo">
+        <p data-linhas>Nenhum consultor batendo na porta, nenhum time, só eu e o silêncio de um negócio parado. Eu olhava pra aquela porta fechada e me perguntava todo dia se tinha me enganado. Contava os dias. Segurava a vontade de desistir.</p>
+        <p data-linhas>Até que alguém bateu. Um consultor só. E daquele um veio tudo o que existe hoje.</p>
+      </div>
+
+      <div class="historia__par">
+        <figure class="arcofoto">
+          <img src="img/paula-019-1000.jpg"
+               srcset="img/paula-019-1000.jpg 666w, img/paula-019-2000.jpg 1333w"
+               sizes="(max-width:900px) 46vw, 24vw"
+               width="1333" height="2000" loading="lazy" decoding="async"
+               alt="Paula Batista perto de uma janela, olhando para fora, com luz natural">
+        </figure>
+        <figure class="arcofoto">
+          <img src="img/paula-022-1000.jpg"
+               srcset="img/paula-022-1000.jpg 666w, img/paula-022-2000.jpg 1333w"
+               sizes="(max-width:900px) 46vw, 24vw"
+               width="1333" height="2000" loading="lazy" decoding="async"
+               alt="Paula Batista de costas, com um xale sobre os ombros">
+        </figure>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- MENTORIAS E PALESTRAS ----------------------------------- -->
+<section class="caminhos" id="mentorias" aria-labelledby="caminhosTit">
+  <div class="env">
+    <p class="caminhos__rotulo">Caminhe comigo</p>
+    <h2 class="tit" id="caminhosTit">Mentorias e <em>palestras</em></h2>
+    <div class="caminhos__grade">
+      <article class="caminho">
+        <figure class="arcofoto caminho__foto">
+          <img src="img/paula-056-1000.jpg" srcset="img/paula-056-1000.jpg 666w, img/paula-056-2000.jpg 1333w" sizes="(max-width:900px) 90vw, 40vw" width="1333" height="2000" loading="lazy" decoding="async" alt="Paula Batista de blazer marrom, sentada numa poltrona clara, as mãos cruzadas">
+        </figure>
+        <h3 class="caminho__tit">Mentoria</h3>
+        <p class="caminho__texto">Pra quem lidera equipe comercial e quer construir uma operação sólida do jeito que eu construí a minha, com estratégia comercial, estruturação de processos e formação de líderes. Você fala direto com a minha equipe pra entender se é o seu momento.</p>
+        <a class="bt bt--cheio" href="https://ig.me/m/paulabatistaoficial" target="_blank" rel="noopener"><span>Falar com a equipe</span></a>
+      </article>
+      <article class="caminho">
+        <figure class="arcofoto caminho__foto">
+          <img src="img/paula-071-1000.jpg" srcset="img/paula-071-1000.jpg 666w, img/paula-071-2000.jpg 1333w" sizes="(max-width:900px) 90vw, 40vw" width="1333" height="2000" loading="lazy" decoding="async" alt="Paula Batista de terninho branco, em pé no salão, as mãos juntas à frente">
+        </figure>
+        <h3 class="caminho__tit">Palestras</h3>
+        <p class="caminho__texto">Pra empresas, eventos de liderança e encontros que querem uma palestra sobre mentalidade de sucesso, identidade, coragem e vida abundante, contada por quem viveu a virada. Você leva a minha história pro seu palco.</p>
+        <p class="caminho__temas">Mentalidade de sucesso · Identidade · Coragem · Liderança · Prosperidade · Inteligência emocional · Espiritualidade · Jornada do herói · Construção de uma vida abundante</p>
+        <a class="bt bt--cheio" href="https://ig.me/m/paulabatistaoficial" target="_blank" rel="noopener"><span>Convidar a Paula para o meu evento</span></a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- FECHO CURTO · versão de apresentação ------------------- -->
+<section class="fecho" id="fecho" aria-labelledby="fechoTit">
+  <div class="env fecho__grade">
+    <figure class="fecho__foto">
+      <img src="img/paula-081-1000.jpg"
+           srcset="img/paula-081-1000.jpg 666w, img/paula-081-2000.jpg 1333w"
+           sizes="(max-width:900px) 80vw, 34vw"
+           width="1333" height="2000" loading="lazy" decoding="async"
+           alt="Paula Batista de branco, encostada no batente de uma porta, sorrindo">
+    </figure>
+    <div>
+      <h2 class="fecho__frase" id="fechoTit">Meu propósito cabe em uma palavra: <em>libertar</em>.</h2>
+      <p class="fecho__apoio">Existe um próximo nível esperando por você. E ele começa quando você decide olhar para dentro, com verdade.</p>
+      <div class="fecho__acoes">
+        <a class="bt bt--cheio" href="https://movimentovidaabundante.com.br/lista-de-espera"><span>Entrar na lista de espera</span></a>
+        <a class="bt bt--fio" href="https://ig.me/m/paulabatistaoficial"><span>Falar com a equipe</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="rodape">
+  <div class="env">
+    <div class="rodape__linha">
+      <img src="logo/pb-horizontal-claro.svg" alt="Paula Batista" width="220" height="44">
+      <span><a href="https://www.instagram.com/paulabatistaoficial/">Instagram</a> &nbsp;·&nbsp; <a href="https://www.youtube.com/watch?v=KD5RaKmgsHg">Podcast Vidas que Transformam Vidas</a></span>
+    </div>
+    <p class="rodape__nota">Prévia de apresentação, setembro de 2026. Desenhado pela Floow.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+  var q = new URLSearchParams(location.search);
+  var PROVA = q.has("prova");
+  /* ?quadro=prova1..prova4 ou historia: congela um quadro da coreografia pra captura */
+  var QUADRO = q.get("quadro");
+  var REDUZ = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var ANIMAR = !PROVA && !REDUZ;
+  var raiz = document.documentElement;
+  if (QUADRO && ANIMAR) raiz.setAttribute("data-quadro", QUADRO);
+  /* na captura de quadro a pagina ja esta rolada de verdade, entao a barra vai pousada */
+  var FORCA_POUSADO = !!QUADRO;
+
+  /* --- menu do celular ------------------------------------ */
+  var abre = document.getElementById("abre");
+  var menu = document.getElementById("menu");
+  if (abre) {
+    abre.addEventListener("click", function () {
+      var ab = menu.getAttribute("data-aberto") === "1";
+      menu.setAttribute("data-aberto", ab ? "0" : "1");
+      abre.setAttribute("aria-expanded", ab ? "false" : "true");
+      abre.textContent = ab ? "Menu" : "Fechar";
+    });
+    menu.addEventListener("click", function (e) {
+      if (e.target.tagName === "A") {
+        menu.setAttribute("data-aberto", "0");
+        abre.setAttribute("aria-expanded", "false");
+        abre.textContent = "Menu";
+      }
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && menu.getAttribute("data-aberto") === "1") abre.click();
+    });
+  }
+
+  /* --- topo que pousa ------------------------------------- */
+  var topo = document.getElementById("topo");
+  function pousa(y) { topo.classList.toggle("topo--pousado", FORCA_POUSADO || y > 40); }
+  pousa(window.scrollY);
+  window.addEventListener("scroll", function () { pousa(window.scrollY); }, { passive: true });
+
+  if (!ANIMAR) return;
+
+  /* --- a classe .anim so entra quando as libs chegam ------- */
+  raiz.classList.add("anim");
+  var socorro = setTimeout(function () {
+    if (!window.gsap) raiz.classList.remove("anim");
+  }, 2200);
+
+  function carrega(src) {
+    return new Promise(function (ok, erro) {
+      var s = document.createElement("script");
+      s.src = src; s.async = false;
+      s.onload = ok; s.onerror = erro;
+      document.head.appendChild(s);
+    });
+  }
+
+  var CDN = "https://cdn.jsdelivr.net/npm/";
+  Promise.all([
+    carrega(CDN + "gsap@3.12.5/dist/gsap.min.js").then(function () {
+      return carrega(CDN + "gsap@3.12.5/dist/ScrollTrigger.min.js");
+    }),
+    carrega(CDN + "lenis@1.1.13/dist/lenis.min.js").catch(function () { return null; })
+  ]).then(monta).catch(function () {
+    clearTimeout(socorro);
+    raiz.classList.remove("anim");
+  });
+
+  function monta() {
+    clearTimeout(socorro);
+    if (!window.gsap || !window.ScrollTrigger) { raiz.classList.remove("anim"); return; }
+    var gsap = window.gsap;
+    gsap.registerPlugin(window.ScrollTrigger);
+    var ST = window.ScrollTrigger;
+    var SCRUB = 0.75;
+
+    /* rolagem suave */
+    var lenis = null;
+    var Lenis = window.Lenis || (window.lenis && window.lenis.default);
+    if (Lenis && !QUADRO) {
+      lenis = new Lenis({ duration: 1.05, smoothWheel: true });
+      lenis.on("scroll", ST.update);
+      gsap.ticker.add(function (t) { lenis.raf(t * 1000); });
+      gsap.ticker.lagSmoothing(0);
+    }
+
+    /* ---- quebra de linha de verdade, pra o texto entrar por linha ---- */
+    function divideLinhas(el) {
+      if (!el.dataset.bruto) el.dataset.bruto = el.textContent.trim();
+      var palavras = el.dataset.bruto.split(/\s+/);
+      el.innerHTML = palavras.map(function (p) { return '<span class="pl">' + p + "</span>"; }).join(" ");
+      var ps = Array.prototype.slice.call(el.querySelectorAll(".pl"));
+      var linhas = [], atual = [], topo = null;
+      ps.forEach(function (p) {
+        var t = Math.round(p.offsetTop);
+        if (topo === null) topo = t;
+        if (Math.abs(t - topo) > 4) { linhas.push(atual); atual = []; topo = t; }
+        atual.push(p.textContent);
+      });
+      if (atual.length) linhas.push(atual);
+      el.innerHTML = linhas.map(function (l) {
+        return '<span class="ln"><i>' + l.join(" ") + "</i></span>";
+      }).join("");
+      return el.querySelectorAll(".ln i");
+    }
+    var paras = Array.prototype.slice.call(document.querySelectorAll("[data-linhas]"));
+    function quebraTudo() { paras.forEach(divideLinhas); }
+    quebraTudo();
+
+    /* ---------- 1. abertura ---------- */
+    var intro = gsap.timeline({ defaults: { ease: "expo.out" } });
+    intro
+      .to("#aberturaFoto", { clipPath: "inset(0% 0 0 0)", duration: 1.5 }, 0)
+      .fromTo("#aberturaFoto img", { scale: 1.14 }, { scale: 1, duration: 2.5, ease: "power2.out" }, 0)
+      .to(".nome .lin i", { y: 0, duration: 1.25, stagger: 0.11 }, 0.45)
+      .to(".abertura__prazer", { opacity: 1, y: 0, duration: 0.9 }, 0.7)
+      .to(".tese b", { opacity: 1, y: 0, duration: 0.8, stagger: 0.58 }, 1.15)
+      .to(".tese em", { opacity: 1, y: 0, duration: 1.1 }, "+=0.55")
+      .to(".abertura__acao", { opacity: 1, y: 0, duration: 0.9 }, "-=0.5")
+      .to(".credito", { opacity: 1, y: 0, duration: 0.9 }, "-=0.7");
+
+    /* o arco se desenha, como se estivessem escrevendo a logo */
+    var arcoAb = document.querySelector(".abertura .arco path");
+    if (arcoAb) {
+      var lenA = arcoAb.getTotalLength();
+      gsap.set(arcoAb, { strokeDasharray: lenA, strokeDashoffset: lenA });
+      intro.to(arcoAb, { strokeDashoffset: 0, duration: 2.3, ease: "power1.inOut" }, 0.35);
+    }
+
+    /* ---- captura de um quadro isolado, sem coreografia de rolagem ---- */
+    if (QUADRO) {
+      intro.progress(1);
+      var arcoQ = document.querySelector(".prova .arco path");
+      if (/^prova(\d)$/.test(QUADRO)) {
+        var n = parseInt(QUADRO.slice(5), 10) - 1;
+        var its = gsap.utils.toArray(".prova__item");
+        its.forEach(function (el, i) {
+          gsap.set(el, { opacity: i === n ? 1 : 0, y: 0, filter: "none" });
+        });
+        if (arcoQ) {
+          var lq = arcoQ.getTotalLength();
+          gsap.set(arcoQ, { strokeDasharray: lq, strokeDashoffset: lq * (1 - n / 3) });
+        }
+        gsap.set(".prova__foto img", { scale: 1.12 - n * 0.04, yPercent: -3 + n * 2.3 });
+      } else {
+        gsap.set(".arcofoto", { clipPath: "inset(0 0 0% 0)" });
+        gsap.set(".historia .ln i", { y: 0 });
+        gsap.set(".historia .tit, .historia__salto", { opacity: 1, y: 0 });
+      }
+      raiz.setAttribute("data-pronto", "1");
+      return;
+    }
+
+    /* paralaxe da abertura, e a cena seguinte subindo por cima */
+    gsap.to("#aberturaFoto img", {
+      yPercent: 9, ease: "none",
+      scrollTrigger: { trigger: ".abertura", start: "top top", end: "bottom top", scrub: true }
+    });
+    gsap.to(".abertura__texto, .abertura__pe", {
+      yPercent: -22, opacity: 0.08, ease: "none",
+      scrollTrigger: { trigger: ".abertura", start: "top top", end: "bottom top", scrub: SCRUB }
+    });
+
+    /* ---------- 2. a prova, cena fixa ---------- */
+    var itens = gsap.utils.toArray(".prova__item");
+    if (itens.length) {
+      var tlP = gsap.timeline({
+        scrollTrigger: { trigger: ".prova", start: "top top", end: "bottom bottom", scrub: SCRUB }
+      });
+      itens.forEach(function (el, i) {
+        if (i === 0) return;
+        tlP.to(itens[i - 1], { opacity: 0, y: -34, filter: "blur(7px)", duration: 0.45, ease: "power2.in" }, i - 1 + 0.45);
+        tlP.fromTo(el,
+          { opacity: 0, y: 40, filter: "blur(7px)" },
+          { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.55, ease: "power2.out" }, i - 1 + 0.72);
+      });
+      tlP.to({}, { duration: 0.4 });
+
+      var arcoPr = document.querySelector(".prova .arco path");
+      if (arcoPr) {
+        var lenP = arcoPr.getTotalLength();
+        gsap.fromTo(arcoPr,
+          { strokeDasharray: lenP, strokeDashoffset: lenP },
+          { strokeDashoffset: 0, ease: "none",
+            scrollTrigger: { trigger: ".prova", start: "top top", end: "bottom bottom", scrub: true } });
+      }
+      gsap.fromTo(".prova__foto img", { scale: 1.12, yPercent: -3 }, {
+        scale: 1, yPercent: 4, ease: "none",
+        scrollTrigger: { trigger: ".prova", start: "top top", end: "bottom bottom", scrub: true }
+      });
+    }
+
+    /* ---------- 3. a historia ---------- */
+    gsap.utils.toArray(".arcofoto").forEach(function (f, i) {
+      gsap.to(f, {
+        clipPath: "inset(0 0 0% 0)", duration: 1.2, ease: "power3.out",
+        scrollTrigger: { trigger: f, start: "top 88%" }
+      });
+      var im = f.querySelector("img");
+      if (im) gsap.fromTo(im, { yPercent: -5 }, {
+        yPercent: 5, ease: "none",
+        scrollTrigger: { trigger: f, start: "top bottom", end: "bottom top", scrub: true }
+      });
+    });
+
+    document.querySelectorAll(".historia [data-linhas]").forEach(function (p) {
+      gsap.to(p.querySelectorAll(".ln i"), {
+        y: 0, duration: 1, ease: "expo.out", stagger: 0.075,
+        scrollTrigger: { trigger: p, start: "top 84%" }
+      });
+    });
+    gsap.from(".historia .tit", {
+      opacity: 0, y: 26, duration: 1.1, ease: "expo.out",
+      scrollTrigger: { trigger: ".historia .tit", start: "top 86%" }
+    });
+    gsap.from(".historia__salto", {
+      opacity: 0, y: 30, duration: 1.2, ease: "expo.out",
+      scrollTrigger: { trigger: ".historia__salto", start: "top 86%" }
+    });
+
+    /* ---------- reajuste ao girar ou redimensionar ---------- */
+    var tmr;
+    window.addEventListener("resize", function () {
+      clearTimeout(tmr);
+      tmr = setTimeout(function () { quebraTudo(); ST.refresh(); }, 220);
+    });
+
+    raiz.setAttribute("data-pronto", "1");
+  }
+})();
+</script>
+</body>
+</html>
